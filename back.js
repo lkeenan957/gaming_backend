@@ -92,7 +92,7 @@ app.get('/characters', function (req, res) {
 //     res.status(404).send("Sorry, that route doesn't exist. Have a nice day :)");
 // });
 
-// start the server in the port 3000 !
-app.listen(3000, function () {
-    console.log('Example app listening on port 3000.'); 
+var port = process.env.PORT || 8080;
+app.listen(port, function () {
+    console.log('Example app listening on port ' + port); 
 });
